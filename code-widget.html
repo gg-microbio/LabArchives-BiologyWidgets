@@ -1,0 +1,60 @@
+<!-- HTML input for widget that makes your code show up nicely on your Lab Archives page. -->
+
+<!-- highlight.js dark theme -->
+<link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css" rel="stylesheet" />
+<style type="text/css">/* Container background + base text color */
+  .code-container {
+    background-color: #282c34;       /* dark gray-blue */
+    color: #e6edf3;                  /* light base text */
+    padding: 10px;
+    border-radius: 4px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 12px;
+  }
+  .code-container pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .code-container code {
+    color: #e6edf3;                  /* ensure default token text is light */
+  }
+
+  /* Override some highlight.js token colors for readability */
+  .code-container .hljs-keyword,
+  .code-container .hljs-built_in,
+  .code-container .hljs-literal {
+    color: #c678dd;                  /* purple for keywords */
+  }
+
+  .code-container .hljs-string,
+  .code-container .hljs-attr {
+    color: #98c379;                  /* green for strings */
+  }
+
+  .code-container .hljs-function .hljs-title {
+    color: #61afef;                  /* blue for function names */
+  }
+
+  .code-container .hljs-comment {
+    color: #5c6370;                  /* grayish comments */
+    font-style: italic;
+  }
+</style>
+<div id="errorMsg">&nbsp;</div>
+
+<table border="0" cellpadding="4" cellspacing="0" id="code_input">
+	<tbody>
+		<tr>
+			<td colspan="2"><b>Paste your code here</b></td>
+		</tr>
+		<tr>
+			<td><textarea cols="60" id="code_text" name="code_text_mandatory" rows="10"></textarea></td>
+			<td style="vertical-align: top;">Language: <select id="code_lang" name="code_lang"><option value="bash">Bash</option><option value="r">R</option> </select><br />
+			<br />
+			<span style="font-size:11px;">This widget renders syntax‑highlighted code with a dark background. </span></td>
+		</tr>
+	</tbody>
+</table>
+
+<div id="code_display">&nbsp;</div>
